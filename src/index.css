@@ -1,1 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 @import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Source Sans 3", sans-serif;
+  }
+}
+
+.nav-link {
+  @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] 
+         hover:bg-[#868686] hover:text-[#333] py-[0.5rem] px-[3rem] w-32 h-12 flex justify-center items-center;
+}
+
+.hero-link {
+  @apply bg-[#333] text-white uppercase tracking-widest inline-block font-bold rounded-md 
+         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#ffffff] hover:text-[#333] 
+         py-[1.2rem] px-[5rem] text-[2rem];
+}
+
+.shake-on-hover {
+  @apply transition duration-300 ease-in-out;
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

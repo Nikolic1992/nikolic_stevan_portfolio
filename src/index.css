@@ -13,10 +13,18 @@
          hover:bg-[#868686] hover:text-[#333] py-[0.5rem] px-[3rem] w-32 h-12 flex justify-center items-center;
 }
 
+.hero-heading {
+  @apply text-[2rem] md:text-[3rem] lg:text-[5rem] font-extrabold text-gray-100 uppercase;
+}
+
+.hero-secondary {
+  @apply max-w-2xl text-[1rem] md:text-[1.75rem] lg:text-[2rem] text-[#fff];
+}
+
 .hero-link {
-  @apply bg-[#333] text-white uppercase tracking-widest inline-block font-bold rounded-md 
-         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#ffffff] hover:text-[#333] 
-         py-[1.2rem] px-[5rem] text-[2rem];
+  @apply bg-[#333] text-white uppercase tracking-wider inline-block font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-white hover:text-[#333] 
+         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out;
 }
 
 .shake-on-hover {
@@ -24,7 +32,7 @@
 }
 
 .shake-on-hover:hover {
-  animation: shake 0.4s ease-in-out;
+  animation: shake 0.5s ease-in-out;
 }
 
 @keyframes shake {
@@ -46,4 +54,46 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.loader {
+  width: 15px;
+  height: 20px;
+  margin-left: 15px;
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: bump 0.4s ease-in infinite alternate;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  border: 15px solid transparent;
+  border-top-color: #fff;
+}
+
+@keyframes bump {
+  0% {
+    transform: translate(-50%, 5px);
+  }
+  100% {
+    transform: translate(-50%, -5px);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2516px);
+  }
+}
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
 }

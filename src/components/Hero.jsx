@@ -1,7 +1,7 @@
 function Hero() {
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)]">
-      <div className="flex flex-col justify-center items-center text-center w-[1200px] p-[6rem] gap-[60px]  shadow-[0_0_20px_rgba(255,255,255,0.08)] rounded-lg">
+    <div className="relative  h-screen flex flex-col items-center justify-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] px-4">
+      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1200px] p-6 sm:p-[6rem] gap-[60px] bg-[radial-gradient(circle,_#ebeaea,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] rounded-lg">
         <h1 className="hero-heading">Hi, I'm Stevan</h1>
         <h3 className="hero-secondary">
           Welcome to my little corner of the internet. Whether you're here by
@@ -9,7 +9,7 @@ function Hero() {
           (or whispers mildly), feel free to reach out. I'm just one message
           away and surprisingly friendly. Let's build something awesome!
         </h3>
-        <a href="#projects" className="hero-link shake-on-hover">
+        <a href="#projects" className="hero-link wiggle-on-hover">
           Projects
         </a>
       </div>

@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-
 @import "tailwindcss";
 
-@layer base {
-  html {
-    font-family: "Source Sans 3", sans-serif;
-  }
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-link {
   @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md 
-         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333]
+         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-125 transition-all duration-300
          py-2 px-4 text-sm w-[7.5rem] flex justify-center items-center border border-gray-400;
 }
 
@@ -29,12 +25,13 @@
 }
 
 .hero-link {
-  @apply bg-[#333] text-white uppercase cursor-pointer tracking-wider inline-block font-semibold rounded-md 
-         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] 
-         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out;
+  @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-110 
+         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
 }
 
-.loader {
+/* Hero loader arrow pointing down */
+.loader-white {
   width: 15px;
   height: 20px;
   margin-left: 15px;
@@ -44,7 +41,7 @@
   box-sizing: border-box;
   animation: bump 0.4s ease-in infinite alternate;
 }
-.loader::after {
+.loader-white::after {
   content: "";
   box-sizing: border-box;
   left: 50%;
@@ -53,6 +50,26 @@
   position: absolute;
   border: 15px solid transparent;
   border-top-color: #fff;
+}
+.loader-black {
+  width: 15px;
+  height: 20px;
+  margin-left: 15px;
+  background: #333;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: bump 0.4s ease-in infinite alternate;
+}
+.loader-black::after {
+  content: "";
+  box-sizing: border-box;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  border: 15px solid transparent;
+  border-top-color: #333;
 }
 
 @keyframes bump {
@@ -64,6 +81,7 @@
   }
 }
 
+/* Wiggle animation for buttons */
 .wiggle-on-hover:hover {
   animation: wiggle 1s ease-in-out infinite;
 }

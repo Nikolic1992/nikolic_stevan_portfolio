@@ -1,11 +1,11 @@
 function Contact() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] px-4 sm:px-6 md:px-8">
-      <div className="bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] px-6 sm:px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg w-full max-w-[800px] text-center">
+      <div className="bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] px-6 sm:px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg w-full max-w-[1000px] text-center">
         <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] uppercase font-bold mb-6 sm:mb-8 text-center text-[#fff]">
           Contact Me
         </h2>
-        <p className="mb-6 sm:mb-10 text-gray-300 text-sm sm:text-base md:text-lg">
+        <p className="mb-6 sm:mb-10 text-gray-300 text-sm sm:text-base md:text-lg ">
           Feel free to contact me by submitting the form below and I will get
           back to you as soon as possible
         </p>
@@ -60,7 +60,7 @@ function Contact() {
 
           <button
             type="submit"
-            className="hero-link !text-[1.25rem] self-end mt-2 sm:mt-4"
+            className="hero-link wiggle-on-hover !text-[1.25rem] self-end mt-2 sm:mt-4"
           >
             SUBMIT
           </button>

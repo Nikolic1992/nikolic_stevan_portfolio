@@ -27,7 +27,7 @@ function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#projects" className="navbar-link">
+            <a href="#projects" className="navbar-link ">
               Projects
             </a>
           </li>
@@ -58,23 +58,26 @@ function NavBar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col items-end gap-2 pr-4 py-4 bg-[#f3f3f3] text-gray-700 font-semibold text-lg">
-          <li>
+        <ul className="md:hidden flex flex-col items-end gap-[5px]  py-2 bg-[#f3f3f3] text-gray-700 font-semibold text-lg">
+          <li className="px-4">
             <a href="#home" className="navbar-link" onClick={toggleMenu}>
               Home
             </a>
           </li>
-          <li>
+          <hr className="border-gray-500  w-full" />
+          <li className="px-4">
             <a href="#about" className="navbar-link" onClick={toggleMenu}>
               About
             </a>
           </li>
-          <li>
+          <hr className="border-gray-500  w-full" />
+          <li className="px-4">
             <a href="#projects" className="navbar-link" onClick={toggleMenu}>
               Projects
             </a>
           </li>
-          <li>
+          <hr className="border-gray-500  w-full" />
+          <li className="px-4">
             <a
               href="#contact"
               className="navbar-link last:border-b-0"
@@ -83,6 +86,7 @@ function NavBar() {
               Contact
             </a>
           </li>
+          <hr className="border-gray-500  w-full" />
         </ul>
       )}
     </nav>

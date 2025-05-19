@@ -1,7 +1,7 @@
 function Projects() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-10 bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)]">
-      <div className="flex flex-col justify-center items-center text-center w-full max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-12 py-10 shadow-[0_0_20px_rgba(0,0,0,0.5)] rounded-lg">
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-30 bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)]">
+      <div className="flex flex-col justify-center items-center text-center w-full max-w-[1000px] px-4 sm:px-6 md:px-8 lg:px-12 py-10 shadow-[0_0_20px_rgba(0,0,0,0.5)] rounded-lg">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold text-white mb-8">
           Projects
         </h2>
@@ -31,13 +31,20 @@ function Projects() {
                   error eum reprehenderit molestiae exercitationem voluptatem ut
                   autem, facilis voluptate quas alias molestias.
                 </p>
-                <a href="#projects" className="hero-link shake-on-hover">
+                <a
+                  href="#projects"
+                  className="hero-link wiggle-on-hover whitespace-nowrap"
+                >
                   Case Study
                 </a>
               </div>
             </div>
           ))}
         </div>
+      </div>
+      {/* Bottom page loader */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+        <span className="loader-white" />
       </div>
     </div>
   );

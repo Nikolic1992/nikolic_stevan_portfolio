@@ -30,7 +30,13 @@ body {
          py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
 }
 
-/* Hero loader arrow pointing down */
+.contact-btn {
+  @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-110 
+         py-2 md:py-5 px-8 text-[1.25rem] md:text-2xl transition duration-300 ease-in-out md:w-[200px];
+}
+
+/* Loader arrow pointing down */
 .loader-white {
   width: 15px;
   height: 20px;
@@ -92,5 +98,59 @@ body {
   }
   50% {
     transform: rotate(3deg);
+  }
+}
+
+/* Emails loader */
+
+.email-loader {
+  position: relative;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 30px 50px 30px 50px;
+  border-color: #d5d5d6 #aeaeaf #202020 #aeaeaf;
+  animation: envFloating 1s ease-in infinite alternate;
+}
+
+.email-loader:after {
+  content: "";
+  position: absolute;
+  right: 62px;
+  top: -40px;
+  height: 70px;
+  width: 50px;
+  background-image: linear-gradient(#fff 45px, transparent 0),
+    linear-gradient(#fff 45px, transparent 0),
+    linear-gradient(#fff 45px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 30px 4px;
+  background-position: 0px 11px, 8px 35px, 0px 60px;
+  animation: envDropping 0.75s linear infinite;
+}
+
+@keyframes envFloating {
+  0% {
+    transform: translate(-2px, -5px);
+  }
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+
+@keyframes envDropping {
+  0% {
+    background-position: 100px 11px, 115px 35px, 105px 60px;
+    opacity: 1;
+  }
+  50% {
+    background-position: 0px 11px, 20px 35px, 5px 60px;
+  }
+  60% {
+    background-position: -30px 11px, 0px 35px, -10px 60px;
+  }
+  75%,
+  100% {
+    background-position: -30px 11px, -30px 35px, -30px 60px;
+    opacity: 0;
   }
 }

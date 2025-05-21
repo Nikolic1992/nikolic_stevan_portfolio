@@ -95,7 +95,7 @@ function About() {
                 <li
                   key={index}
                   title={tech}
-                  className="bg-[#333] text-white p-4 rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.15)] flex items-center justify-center transition-transform duration-500 hover:scale-130 hover:rotate-[360deg]"
+                  className="bg-[#333] text-white p-4 rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.15)] flex items-center justify-center transition-transform duration-500 hover:scale-130 hover:rotate-[360deg] cursor-pointer"
                   style={{ width: "60px", height: "60px" }}
                 >
                   {techIcons[tech]}

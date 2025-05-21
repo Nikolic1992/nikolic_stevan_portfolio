@@ -1,41 +1,56 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  const smoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // Close menu if open
+    }
+  };
+
+  // Scroll to the #home section ( HERO )
+  const handleLogoClick = () => {
+    navigate("/", { state: { scrollTo: "home" } });
+    smoothScroll("home");
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#f3f3f3] shadow-md z-50">
       <div className="flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8">
-        <div className="font-bold text-3xl cursor-pointer">LOGO</div>
+        <div
+          className="font-bold text-3xl cursor-pointer"
+          onClick={handleLogoClick}
+        >
+          SN.tech
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-4 sm:gap-6 md:gap-[2rem] text-gray-700 font-semibold">
-          <li>
-            <a href="#home" className="navbar-link">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="navbar-link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="navbar-link ">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="navbar-link">
-              Contact
-            </a>
-          </li>
+          {["home", "about", "projects", "contact"].map((section) => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScroll(section);
+                }}
+                className="navbar-link"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </li>
+          ))}
         </ul>
 
         {/* Hamburger Icon */}
@@ -58,35 +73,22 @@ function NavBar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col items-end gap-[5px]  py-2 bg-[#f3f3f3] text-gray-700 font-semibold text-lg">
-          <li className="px-4">
-            <a href="#home" className="navbar-link" onClick={toggleMenu}>
-              Home
-            </a>
-          </li>
-          <hr className="border-gray-500  w-full" />
-          <li className="px-4">
-            <a href="#about" className="navbar-link" onClick={toggleMenu}>
-              About
-            </a>
-          </li>
-          <hr className="border-gray-500  w-full" />
-          <li className="px-4">
-            <a href="#projects" className="navbar-link" onClick={toggleMenu}>
-              Projects
-            </a>
-          </li>
-          <hr className="border-gray-500  w-full" />
-          <li className="px-4">
-            <a
-              href="#contact"
-              className="navbar-link last:border-b-0"
-              onClick={toggleMenu}
-            >
-              Contact
-            </a>
-          </li>
-          <hr className="border-gray-500  w-full" />
+        <ul className="md:hidden flex flex-col items-end gap-[5px] py-2 bg-[#f3f3f3] text-gray-700 font-semibold text-lg">
+          {["home", "about", "projects", "contact"].map((section) => (
+            <li key={section} className="px-4">
+              <a
+                href={`#${section}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScroll(section);
+                }}
+                className="navbar-link"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+              <hr className="border-gray-500 w-full" />
+            </li>
+          ))}
         </ul>
       )}
     </nav>

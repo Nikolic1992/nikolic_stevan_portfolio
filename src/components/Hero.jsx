@@ -1,7 +1,9 @@
+// ICONS
+import { MdOutlineFileDownload } from "react-icons/md";
 function Hero() {
   return (
-    <div className="relative py-[150px]  md:h-screen flex flex-col items-center md:justify-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] px-4">
-      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[6rem] gap-[30px] md:gap-[60px] bg-[radial-gradient(circle,_#ebeaea,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] rounded-lg">
+    <div className="relative py-[150px] md:h-screen flex flex-col items-center md:justify-center px-4">
+      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[6rem] gap-[30px] md:gap-[60px] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
         <h1 className="hero-heading">Hi, I'm Stevan</h1>
         <h3 className="hero-secondary">
           Welcome to my little corner of the internet. Whether you're here by
@@ -11,13 +13,24 @@ function Hero() {
           <br />
           <span className="font-italic">Let's build something awesome!</span>
         </h3>
-        <a href="#projects" className="hero-link wiggle-on-hover">
-          Projects
-        </a>
+        <div className="flex items-center gap-5">
+          <a href="#projects" className="hero-btn wiggle-on-hover">
+            Projects
+          </a>
+          <a
+            href="../public/assets/Stevan_Nikolic_Resume.pdf"
+            download
+            className="hero-resume-btn wiggle-on-hover gap-2 flex items-center"
+          >
+            <span>Resume</span>
+            <MdOutlineFileDownload size={30} />
+          </a>
+        </div>
       </div>
-      {/* Bottom page loader */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="loader-white" />
+
+      {/* Bottom page loader - CENTERED */}
+      <div className="absolute bottom-8 flex justify-center w-full">
+        <span className="loader"></span>
       </div>
     </div>
   );

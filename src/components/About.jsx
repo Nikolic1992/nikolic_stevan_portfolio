@@ -35,34 +35,49 @@ const techStackArray = [
 ];
 
 const techIcons = {
-  HTML: <FaHtml5 size={24} className="text-orange-500" />,
-  CSS: <FaCss3Alt size={24} className="text-blue-500" />,
-  Tailwind: <SiTailwindcss size={24} className="text-cyan-400" />,
-  "Material UI": <SiMui size={24} className="text-blue-300" />,
-  Bootstrap: <FaBootstrap size={24} className="text-purple-500" />,
-  SASS: <FaSass size={24} className="text-pink-400" />,
-  JavaScript: <SiJavascript size={24} className="text-yellow-400" />,
-  TypeScript: <SiTypescript size={24} className="text-blue-500" />,
-  React: <FaReact size={24} className="text-cyan-300 animate-spin-slow" />,
-  Redux: <SiRedux size={24} className="text-purple-400" />,
-  "Node.js": <FaNodeJs size={24} className="text-green-600" />,
-  "Express.js": <SiExpress size={24} className="text-gray-400" />,
-  Firebase: <SiFirebase size={24} className="text-yellow-500" />,
-  axios: <SiAxios size={24} className="text-sky-400" />,
+  HTML: <FaHtml5 className="text-orange-500 text-[18px] md:text-[24px]" />,
+  CSS: <FaCss3Alt className="text-blue-500 text-[18px] md:text-[24px]" />,
+  Tailwind: (
+    <SiTailwindcss className="text-cyan-400 text-[18px] md:text-[24px]" />
+  ),
+  "Material UI": <SiMui className="text-blue-300 text-[18px] md:text-[24px]" />,
+  Bootstrap: (
+    <FaBootstrap className="text-purple-500 text-[18px] md:text-[24px]" />
+  ),
+  SASS: <FaSass className="text-pink-400 text-[18px] md:text-[24px]" />,
+  JavaScript: (
+    <SiJavascript className="text-yellow-400 text-[18px] md:text-[24px]" />
+  ),
+  TypeScript: (
+    <SiTypescript className="text-blue-500 text-[18px] md:text-[24px]" />
+  ),
+  React: <FaReact className="text-cyan-300  text-[18px] md:text-[24px]" />,
+  Redux: <SiRedux className="text-purple-400 text-[18px] md:text-[24px]" />,
+  "Node.js": <FaNodeJs className="text-green-600 text-[18px] md:text-[24px]" />,
+  "Express.js": (
+    <SiExpress className="text-gray-400 text-[18px] md:text-[24px]" />
+  ),
+  Firebase: (
+    <SiFirebase className="text-yellow-500 text-[18px] md:text-[24px]" />
+  ),
+  axios: <SiAxios className="text-sky-400 text-[18px] md:text-[24px]" />,
 };
 
 function About() {
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)]">
+    <div className="relative min-h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-center w-full max-w-[1000px] p-[3rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold mb-6 md:mb-9 lg:mb-12 text-center text-[#fff]">
           About Me
         </h2>
-        <h4 className="text-[#fff] text-xl md:text-2xl lg:text-3xl">
-          My name is <b>Stevan Nikolic</b>, Web Developer based in Sydney,
-          Australia. Outside of coding, I enjoy football, darts, board games,
-          video games, and spending time with friends.
-          <br /> These hobbies keep me balanced and inspired.
+        <h4 className="text-[#fff] text-l md:text-xl lg:text-2xl">
+          My name is <b>Stevan Nikolic</b>, a Web Developer based in Sydney,
+          Australia. I didn't get into programming because of some grand plan —
+          I just started building things out of curiosity. One line of code
+          turned into ten, ten turned into hours of experimenting, and before I
+          knew it, I was hooked. There’s something deeply satisfying about
+          turning a blank screen into something real, something that works, and
+          maybe even something beautiful.
         </h4>
         <div className="mt-12 flex flex-col gap-16 lg:flex-row text-left w-full">
           <div className="flex-1 space-y-6">
@@ -81,7 +96,7 @@ function About() {
             </h3>
             <a
               href="#contact"
-              className="hero-link wiggle-on-hover w-full text-center"
+              className="hero-btn wiggle-on-hover w-full text-center"
             >
               Contact
             </a>
@@ -104,11 +119,6 @@ function About() {
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Bottom page loader */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="loader-black" />
       </div>
     </div>
   );

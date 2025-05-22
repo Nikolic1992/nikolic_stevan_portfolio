@@ -1,15 +1,15 @@
 const projectsData = [
   {
     id: 1,
-    title: "Portfolio Website",
-    image: "https://via.placeholder.com/600x400",
-    description: "A modern responsive portfolio website.",
-    live: "https://yourportfolio.com",
-    github: "https://github.com/yourusername/portfolio",
+    title: "Travel Marvel",
+    image: "../../public/assets/travel-marvel.png",
+    description: "A modern application for travel planning.",
+    live: "https://travel-marvel.vercel.app/",
+    github: "https://github.com/Nikolic1992/travel-marvel",
   },
   {
     id: 2,
-    title: "Task Manager App",
+    title: "Music Player",
     image: "https://via.placeholder.com/600x400",
     description: "Full-featured task management application.",
     live: "https://taskmanager.com",

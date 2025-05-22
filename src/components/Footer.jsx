@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)]   text-gray-400 py-3 md:py-10 text-center">
+    <footer className=" bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)]  text-gray-900 py-3 md:py-10 text-center">
       <div className="flex flex-col items-center justify-center gap-3 uppercase">
         <div className="flex items-center text-xl lg:text-2xl">
           Connect with me

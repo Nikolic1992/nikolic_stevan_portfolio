@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
   font-family: "Roboto", sans-serif;
 }
 
-.navbar-link {
+.navbar-btn {
   @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md 
-         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-125 transition-all duration-300
+         shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  transition-all duration-300
          py-2 px-4 text-sm w-[7.5rem] flex justify-center items-center border border-gray-400;
 }
 
@@ -17,73 +21,63 @@ body {
 }
 
 .hero-heading {
-  @apply text-[2rem] md:text-[3rem] lg:text-[5rem] font-extrabold text-[#333] uppercase;
+  @apply text-[2rem] md:text-[3rem] lg:text-[5rem] font-extrabold text-[white] uppercase;
 }
 
 .hero-secondary {
-  @apply max-w-2xl text-[1rem] md:text-[1.75rem] lg:text-[2rem] text-[#33333];
+  @apply max-w-2xl text-[1rem] md:text-[1.75rem] lg:text-[2rem] text-[#f3f3f3];
 }
 
-.hero-link {
+.hero-btn {
   @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
-         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-110 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  hover:scale-110 
+         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
+}
+
+.hero-resume-btn {
+  @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#333]  hover:scale-110 
          py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
 }
 
 .contact-btn {
-  @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
-         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#868686] hover:text-[#333] hover:scale-110 
-         py-2 md:py-5 px-8 text-[1.25rem] md:text-2xl transition duration-300 ease-in-out md:w-[200px];
+  @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#7843E9] hover:scale-110 
+         text-[1.25rem] md:text-2xl transition duration-300 ease-in-out 
+         w-full md:w-[200px] h-[56px];
 }
 
-/* Loader arrow pointing down */
-.loader-white {
-  width: 15px;
-  height: 20px;
-  margin-left: 15px;
-  background: #fff;
-  display: inline-block;
+/* Mouse loader */
+.loader {
+  width: 30px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
   position: relative;
-  box-sizing: border-box;
-  animation: bump 0.4s ease-in infinite alternate;
-}
-.loader-white::after {
-  content: "";
-  box-sizing: border-box;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, 0);
-  position: absolute;
-  border: 15px solid transparent;
-  border-top-color: #fff;
-}
-.loader-black {
-  width: 15px;
-  height: 20px;
-  margin-left: 15px;
-  background: #333;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  animation: bump 0.4s ease-in infinite alternate;
-}
-.loader-black::after {
-  content: "";
-  box-sizing: border-box;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, 0);
-  position: absolute;
-  border: 15px solid transparent;
-  border-top-color: #333;
+  border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
 }
 
-@keyframes bump {
+.loader::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 50%);
+  width: 5px;
+  height: 5px;
+  background: #7843e9;
+  border-radius: 50%;
+  animation: fadeDown 1s ease-out infinite;
+}
+
+@keyframes fadeDown {
   0% {
-    transform: translate(-50%, 5px);
+    top: 0%;
+    opacity: 1;
   }
   100% {
-    transform: translate(-50%, -5px);
+    top: 60%;
+    opacity: 0;
   }
 }
 
@@ -104,53 +98,21 @@ body {
 /* Emails loader */
 
 .email-loader {
-  position: relative;
-  border-style: solid;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
   box-sizing: border-box;
-  border-width: 30px 50px 30px 50px;
-  border-color: #d5d5d6 #aeaeaf #202020 #aeaeaf;
-  animation: envFloating 1s ease-in infinite alternate;
+  animation: rotation 1s linear infinite;
 }
 
-.email-loader:after {
-  content: "";
-  position: absolute;
-  right: 62px;
-  top: -40px;
-  height: 70px;
-  width: 50px;
-  background-image: linear-gradient(#fff 45px, transparent 0),
-    linear-gradient(#fff 45px, transparent 0),
-    linear-gradient(#fff 45px, transparent 0);
-  background-repeat: no-repeat;
-  background-size: 30px 4px;
-  background-position: 0px 11px, 8px 35px, 0px 60px;
-  animation: envDropping 0.75s linear infinite;
-}
-
-@keyframes envFloating {
+@keyframes rotation {
   0% {
-    transform: translate(-2px, -5px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0, 5px);
-  }
-}
-
-@keyframes envDropping {
-  0% {
-    background-position: 100px 11px, 115px 35px, 105px 60px;
-    opacity: 1;
-  }
-  50% {
-    background-position: 0px 11px, 20px 35px, 5px 60px;
-  }
-  60% {
-    background-position: -30px 11px, 0px 35px, -10px 60px;
-  }
-  75%,
-  100% {
-    background-position: -30px 11px, -30px 35px, -30px 60px;
-    opacity: 0;
+    transform: rotate(360deg);
   }
 }

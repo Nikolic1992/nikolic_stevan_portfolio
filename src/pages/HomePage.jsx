@@ -27,12 +27,24 @@ function HomePage() {
       <main>
         <section id="home">
           <Hero />
+          <hr
+            className="w-full border-t border-white my-5"
+            aria-hidden="true"
+          />
         </section>
         <section id="about">
           <About />
+          <hr
+            className="w-full border-t border-white my-5"
+            aria-hidden="true"
+          />
         </section>
         <section id="projects">
           <Projects />
+          <hr
+            className="w-full border-t border-white my-5"
+            aria-hidden="true"
+          />
         </section>
         <section id="contact">
           <Contact />

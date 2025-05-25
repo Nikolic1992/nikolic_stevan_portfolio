@@ -27,7 +27,9 @@ function Hero() {
             Projects
           </button>
           <a
-            href="../public/assets/Nikolic_Stevan_Resume.pdf"
+            href="/assets/Nikolic_Stevan_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             download
             className="hero-resume-btn wiggle-on-hover gap-2 flex items-center"
           >

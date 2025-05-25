@@ -36,13 +36,13 @@ body {
 
 .hero-resume-btn {
   @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
-         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#333]  hover:scale-110 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)]   hover:scale-110 
          py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
 }
 
 .contact-btn {
-  @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider font-semibold rounded-md 
-         shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#7843E9] hover:scale-110 
+  @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider font-semibold rounded-md 
+         shadow-[0_5px_15px_rgba(0,0,0,0.15)]  hover:scale-110 
          text-[1.25rem] md:text-2xl transition duration-300 ease-in-out 
          w-full md:w-[200px] h-[56px];
 }

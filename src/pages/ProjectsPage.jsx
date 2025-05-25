@@ -13,7 +13,6 @@ function ProjectsPage() {
   const handleBack = () => {
     navigate("/", { state: { scrollTo: "projects" } });
 
-    // Scroll back to the projects section
     setTimeout(() => {
       const el = document.getElementById("projects");
       if (el) {
@@ -24,43 +23,49 @@ function ProjectsPage() {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-white text-xl">
+      <div className="relative min-h-screen flex items-center justify-center text-white text-xl">
+        <button
+          onClick={handleBack}
+          className="absolute navbar-btn cursor-pointer top-5 left-5"
+        >
+          GO BACK
+        </button>
         Project not found.
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 py-10 flex flex-col items-center">
+    <div className=" relative min-h-screen text-white px-6 py-12 flex flex-col items-center justify-center">
       <button
         onClick={handleBack}
-        className="text-blue-400  mb-6 cursor-pointer"
+        className="absolute navbar-btn cursor-pointer top-5 left-5"
       >
         GO BACK
       </button>
 
-      <div className="max-w-[1000px] w-full flex flex-col gap-8 items-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+      <div className="max-w-[1200px] w-full flex flex-col gap-10 items-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg p-10">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-white tracking-tight">
           {project.title}
         </h1>
 
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-[300px] sm:h-[400px] object-cover rounded-lg shadow-lg"
+          className="hidden md:block  max-h-[650px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
         />
 
-        <p className="text-lg sm:text-xl text-center text-gray-300 max-w-[800px]">
+        <p className="text-base sm:text-lg md:text-xl text-center text-gray-300 leading-relaxed max-w-[900px]">
           {project.description}
         </p>
 
-        <div className="flex gap-6 mt-6">
+        <div className="flex gap-8 items-center justify-center">
           {project.live && (
             <a
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 uppercase hover:text-blue-600"
+              className="hero-btn text-nowrap"
             >
               Live Preview
             </a>
@@ -70,9 +75,10 @@ function ProjectsPage() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 underline hover:text-blue-600"
+              className="text-white hover:text-gray-400 transition-transform duration-500 hover:scale-130 hover:rotate-[360deg] cursor-pointer"
+              title="View on GitHub"
             >
-              <FaGithub size={40} />
+              <FaGithub size={46} />
             </a>
           )}
         </div>

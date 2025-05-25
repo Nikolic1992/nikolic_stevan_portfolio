@@ -64,6 +64,12 @@ const techIcons = {
 };
 
 function About() {
+  const smoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center text-center w-full max-w-[1000px] p-[3rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
@@ -71,13 +77,16 @@ function About() {
           About Me
         </h2>
         <h4 className="text-[#fff] text-l md:text-xl lg:text-2xl">
-          My name is <b>Stevan Nikolic</b>, a Web Developer based in Sydney,
-          Australia. I didn't get into programming because of some grand plan —
-          I just started building things out of curiosity. One line of code
-          turned into ten, ten turned into hours of experimenting, and before I
-          knew it, I was hooked. There’s something deeply satisfying about
-          turning a blank screen into something real, something that works, and
-          maybe even something beautiful.
+          My name is <b>Stevan Nikolic</b>, a dedicated{" "}
+          <b>Full Stack Web Developer</b> based in Sydney, Australia. My
+          approach to programming is driven by curiosity, but sustained by a
+          strong commitment to quality and precision. What began as simple
+          experimentation quickly grew into a disciplined practice where every
+          line of code matters. I take pride in crafting clean, efficient, and
+          well-structured solutions, paying close attention to detail to ensure
+          that each project is not only functional but also reliable and
+          visually polished. For me, there is great satisfaction in transforming
+          a blank screen into a seamless and impactful user experience.
         </h4>
         <div className="mt-12 flex flex-col gap-16 lg:flex-row text-left w-full">
           <div className="flex-1 space-y-6">
@@ -94,16 +103,16 @@ function About() {
               enthusiasm drives me to create meaningful digital experiences that
               can make a difference.
             </h3>
-            <a
-              href="#contact"
-              className="hero-btn wiggle-on-hover w-full text-center"
+            <button
+              onClick={() => smoothScroll("contact")}
+              className="contact-btn wiggle-on-hover w-full text-center"
             >
               Contact
-            </a>
+            </button>
           </div>
           <div className="flex-1 items-center space-y-6">
             <h2 className="text-2xl font-semibold text-gray-400 text-center">
-              Technologies:
+              Technologies i use:
             </h2>
             <ul className="grid grid-cols-4 gap-4 justify-items-center">
               {techStackArray.map((tech, index) => (

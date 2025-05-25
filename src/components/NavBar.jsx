@@ -27,12 +27,16 @@ function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] z-50 ">
-      <div className="flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8">
+      <div className="relative flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8">
         <div
-          className="font-bold text-3xl cursor-pointer"
           onClick={handleLogoClick}
+          className="w-[60px] h-[60px] rounded-full flex items-center justify-center cursor-pointer "
         >
-          SN.tech
+          <img
+            src="./public/assets/logo.png"
+            alt="SN technology logo"
+            className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px] rounded-full absolute z-50 bg-[radial-gradient (circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] ml-10"
+          />
         </div>
 
         {/* Desktop Menu */}

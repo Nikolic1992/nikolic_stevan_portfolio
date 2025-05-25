@@ -1,6 +1,12 @@
 // ICONS
 import { MdOutlineFileDownload } from "react-icons/md";
 function Hero() {
+  const smoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative py-[150px] md:h-screen flex flex-col items-center md:justify-center px-4">
       <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[6rem] gap-[30px] md:gap-[60px] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
@@ -14,11 +20,14 @@ function Hero() {
           <span className="font-italic">Let's build something awesome!</span>
         </h3>
         <div className="flex items-center gap-5">
-          <a href="#projects" className="hero-btn wiggle-on-hover">
+          <button
+            onClick={() => smoothScroll("projects")}
+            className="hero-btn wiggle-on-hover"
+          >
             Projects
-          </a>
+          </button>
           <a
-            href="../public/assets/Stevan_Nikolic_Resume.pdf"
+            href="../public/assets/Nikolic_Stevan_Resume.pdf"
             download
             className="hero-resume-btn wiggle-on-hover gap-2 flex items-center"
           >

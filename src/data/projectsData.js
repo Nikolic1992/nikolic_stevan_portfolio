@@ -2,7 +2,7 @@ const projectsData = [
   {
     id: 1,
     title: "Travel Marvel ✈️🌍",
-    image: "../../public/assets/travel-marvel.png",
+    image: "../assets/travel-marvel.png",
     mainDescription:
       "Smart and modern travel planner that helps users organize trips with ease. It allows users to log in, choose destinations, track expenses, and add images and documents — all designed to enhance the travel planning experience",
     description:

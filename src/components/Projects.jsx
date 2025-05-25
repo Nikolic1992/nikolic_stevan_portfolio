@@ -21,7 +21,7 @@ function Projects() {
               key={project.id}
               className="flex flex-col lg:flex-row items-center justify-center p-6 gap-8 w-full bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] rounded-lg"
             >
-              <div className="w-full lg:w-[600px] h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg">
+              <div className="w-full lg:w-[600px]  md:h-[350px] lg:h-[400px] rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}

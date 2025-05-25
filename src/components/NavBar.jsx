@@ -35,7 +35,7 @@ function NavBar() {
           <img
             src="./assets/logo.png"
             alt="SN technology logo"
-            className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px] rounded-full absolute z-50 bg-[radial-gradient (circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] ml-10"
+            className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px] rounded-full absolute z-50 bg-[radial-gradient (circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] lg:ml-10"
           />
         </div>
 

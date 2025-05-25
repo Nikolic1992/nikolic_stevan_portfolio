@@ -93,7 +93,7 @@ function About() {
             <h2 className="text-2xl font-semibold text-gray-400 text-center">
               A little bit about why programming:
             </h2>
-            <h3 className="text-[#fff] text-xl text-center">
+            <h3 className="text-[#fff] text-l md:text-xl lg:text-2xl text-center">
               I am genuinely fascinated by the entire world of programming —
               from understanding how the internet works to seeing its impact in
               fields like medicine and beyond. For me, programming is more than

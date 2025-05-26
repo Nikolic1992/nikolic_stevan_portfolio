@@ -9,7 +9,7 @@ function Hero() {
   };
   return (
     <div className="relative py-[150px] md:h-screen flex flex-col items-center md:justify-center px-4">
-      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[6rem] gap-[30px] md:gap-[60px] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
+      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[2rem] gap-[1.875rem] md:gap-[3.75rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
         <h1 className="hero-heading">Hi, I'm Stevan</h1>
         <h3 className="hero-secondary">
           Welcome to my little corner of the internet. Whether you're here by

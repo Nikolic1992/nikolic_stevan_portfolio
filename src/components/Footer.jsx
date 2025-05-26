@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="bg-gradient-to-br from-white via-gray-100 to-gray-300 shadow-lg text-gray-800 py-6 md:py-10 text-center">
       <div className="flex flex-col items-center gap-4">
-        <h2 className="text-lg md:text-xl lg:text-2xl font-semibold tracking-wide uppercase">
+        <h2 className="text-[1.1rem] md:text-[1.25rem] lg:text-[1.5rem] font-semibold tracking-wide uppercase">
           Let’s connect
         </h2>
         <div className="flex gap-6">
@@ -26,7 +26,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <p className="mt-6 text-sm text-gray-600">
+      <p className="mt-6 text-[0.95rem] text-gray-600">
         &copy; {new Date().getFullYear()} Stevan Nikolic. All rights reserved.
       </p>
     </footer>

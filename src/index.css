@@ -1,4 +1,13 @@
+/*
+  Refactored for responsiveness: 
+  - All text sizes use rem units for better scaling
+  - Added/remapped responsive classes to use rems
+*/
 @import "tailwindcss";
+
+html {
+  font-size: 16px; /* base for rems */
+}
 
 body {
   margin: 0;
@@ -6,53 +15,54 @@ body {
   box-sizing: border-box;
   background-color: black;
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 .navbar-btn {
   @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md 
          shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  transition-all duration-300
-         py-2 px-4 text-sm w-[7.5rem] flex justify-center items-center border border-gray-400;
+         py-[0.5rem] px-[1rem] text-[0.9rem] w-[7.5rem] flex justify-center items-center border border-gray-400;
 }
 
 @media (max-width: 768px) {
   .navbar-link {
-    @apply w-36 h-8 text-base justify-center border-0;
+    @apply w-[9rem] h-[2rem] text-[1rem] justify-center border-0;
   }
 }
 
 .hero-heading {
-  @apply text-[2rem] md:text-[3rem] lg:text-[5rem] font-extrabold text-[white] uppercase;
+  @apply text-[2.5rem] md:text-[3.5rem] lg:text-[5rem] font-extrabold text-[white] uppercase;
 }
 
 .hero-secondary {
-  @apply max-w-2xl text-[1rem] md:text-[1.75rem] lg:text-[2rem] text-[#f3f3f3];
+  @apply max-w-2xl text-[1.1rem] md:text-[1.5rem] lg:text-[2rem] text-[#f3f3f3];
 }
 
 .hero-btn {
   @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  hover:scale-110 
-         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
+         py-[0.75rem] px-[1.5rem] text-[1.1rem] md:text-[1.5rem] transition duration-300 ease-in-out md:w-[12.5rem];
 }
 
 .hero-resume-btn {
   @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)]   hover:scale-110 
-         py-3 px-6 text-base md:text-2xl transition duration-300 ease-in-out md:w-[200px];
+         py-[0.75rem] px-[1.5rem] text-[1.1rem] md:text-[1.5rem] transition duration-300 ease-in-out md:w-[12.5rem];
 }
 
 .contact-btn {
   @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)]  hover:scale-110 
-         text-[1.25rem] md:text-2xl transition duration-300 ease-in-out 
-         w-full md:w-[200px] h-[56px];
+         text-[1.25rem] md:text-[1.5rem] transition duration-300 ease-in-out 
+         w-full md:w-[12.5rem] h-[3.5rem];
 }
 
 /* Mouse loader */
 .loader {
-  width: 30px;
-  height: 50px;
+  width: 1.875rem;
+  height: 3.125rem;
   box-sizing: border-box;
-  border: 2px solid #fff;
+  border: 0.125rem solid #fff;
   position: relative;
   border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
 }
@@ -63,8 +73,8 @@ body {
   left: 50%;
   top: 0;
   transform: translate(-50%, 50%);
-  width: 5px;
-  height: 5px;
+  width: 0.3125rem;
+  height: 0.3125rem;
   background: #7843e9;
   border-radius: 50%;
   animation: fadeDown 1s ease-out infinite;
@@ -96,11 +106,10 @@ body {
 }
 
 /* Emails loader */
-
 .email-loader {
-  width: 24px;
-  height: 24px;
-  border: 3px solid #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.1875rem solid #fff;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
@@ -114,5 +123,24 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/*
+  Add unique spacing for <hr /> section dividers
+*/
+.section-divider {
+  margin-top: 3.5rem; /* 56px */
+  margin-bottom: 3.5rem;
+  border: none;
+  border-top: 2px solid #fff;
+  width: 100%;
+  opacity: 0.15;
+}
+
+@media (max-width: 768px) {
+  .section-divider {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }

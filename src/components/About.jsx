@@ -35,32 +35,42 @@ const techStackArray = [
 ];
 
 const techIcons = {
-  HTML: <FaHtml5 className="text-orange-500 text-[18px] md:text-[24px]" />,
-  CSS: <FaCss3Alt className="text-blue-500 text-[18px] md:text-[24px]" />,
+  HTML: (
+    <FaHtml5 className="text-orange-500 text-[1.125rem] md:text-[1.5rem]" />
+  ),
+  CSS: <FaCss3Alt className="text-blue-500 text-[1.125rem] md:text-[1.5rem]" />,
   Tailwind: (
-    <SiTailwindcss className="text-cyan-400 text-[18px] md:text-[24px]" />
+    <SiTailwindcss className="text-cyan-400 text-[1.125rem] md:text-[1.5rem]" />
   ),
-  "Material UI": <SiMui className="text-blue-300 text-[18px] md:text-[24px]" />,
+  "Material UI": (
+    <SiMui className="text-blue-300 text-[1.125rem] md:text-[1.5rem]" />
+  ),
   Bootstrap: (
-    <FaBootstrap className="text-purple-500 text-[18px] md:text-[24px]" />
+    <FaBootstrap className="text-purple-500 text-[1.125rem] md:text-[1.5rem]" />
   ),
-  SASS: <FaSass className="text-pink-400 text-[18px] md:text-[24px]" />,
+  SASS: <FaSass className="text-pink-400 text-[1.125rem] md:text-[1.5rem]" />,
   JavaScript: (
-    <SiJavascript className="text-yellow-400 text-[18px] md:text-[24px]" />
+    <SiJavascript className="text-yellow-400 text-[1.125rem] md:text-[1.5rem]" />
   ),
   TypeScript: (
-    <SiTypescript className="text-blue-500 text-[18px] md:text-[24px]" />
+    <SiTypescript className="text-blue-500 text-[1.125rem] md:text-[1.5rem]" />
   ),
-  React: <FaReact className="text-cyan-300  text-[18px] md:text-[24px]" />,
-  Redux: <SiRedux className="text-purple-400 text-[18px] md:text-[24px]" />,
-  "Node.js": <FaNodeJs className="text-green-600 text-[18px] md:text-[24px]" />,
+  React: (
+    <FaReact className="text-cyan-300  text-[1.125rem] md:text-[1.5rem]" />
+  ),
+  Redux: (
+    <SiRedux className="text-purple-400 text-[1.125rem] md:text-[1.5rem]" />
+  ),
+  "Node.js": (
+    <FaNodeJs className="text-green-600 text-[1.125rem] md:text-[1.5rem]" />
+  ),
   "Express.js": (
-    <SiExpress className="text-gray-400 text-[18px] md:text-[24px]" />
+    <SiExpress className="text-gray-400 text-[1.125rem] md:text-[1.5rem]" />
   ),
   Firebase: (
-    <SiFirebase className="text-yellow-500 text-[18px] md:text-[24px]" />
+    <SiFirebase className="text-yellow-500 text-[1.125rem] md:text-[1.5rem]" />
   ),
-  axios: <SiAxios className="text-sky-400 text-[18px] md:text-[24px]" />,
+  axios: <SiAxios className="text-sky-400 text-[1.125rem] md:text-[1.5rem]" />,
 };
 
 function About() {
@@ -71,12 +81,12 @@ function About() {
     }
   };
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center">
+    <div className="relative min-h-screen flex flex-col justify-center items-center p-[1rem] md:p-[2rem] lg:p-[3rem]">
       <div className="flex flex-col justify-center items-center text-center w-full max-w-[1000px] p-[3rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold mb-6 md:mb-9 lg:mb-12 text-center text-[#fff]">
+        <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] uppercase font-bold mb-6 md:mb-9 lg:mb-12 text-center text-[#fff]">
           About Me
         </h2>
-        <h4 className="text-[#fff] text-l md:text-xl lg:text-2xl">
+        <h4 className="text-[#fff] text-[1.1rem] md:text-[1.25rem] lg:text-[1.5rem]">
           My name is <b>Stevan Nikolic</b>, a dedicated{" "}
           <b>Full Stack Web Developer</b> based in Sydney, Australia. My
           approach to programming is driven by curiosity, but sustained by a
@@ -90,10 +100,10 @@ function About() {
         </h4>
         <div className="mt-12 flex flex-col gap-16 lg:flex-row text-left w-full">
           <div className="flex-1 space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-400 text-center">
+            <h2 className="text-[1.25rem] font-semibold text-gray-400 text-center">
               A little bit about why programming:
             </h2>
-            <h3 className="text-[#fff] text-l md:text-xl lg:text-2xl text-center">
+            <h3 className="text-[#fff] text-[1.1rem] md:text-[1.25rem] lg:text-[1.5rem] text-center">
               I am genuinely fascinated by the entire world of programming —
               from understanding how the internet works to seeing its impact in
               fields like medicine and beyond. For me, programming is more than
@@ -111,7 +121,7 @@ function About() {
             </button>
           </div>
           <div className="flex-1 items-center space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-400 text-center">
+            <h2 className="text-[1.25rem] font-semibold text-gray-400 text-center">
               Technologies i use:
             </h2>
             <ul className="grid grid-cols-4 gap-4 justify-items-center">
@@ -120,7 +130,7 @@ function About() {
                   key={index}
                   title={tech}
                   className="bg-[#333] text-white p-4 rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.15)] flex items-center justify-center transition-transform duration-500 hover:scale-130 hover:rotate-[360deg] cursor-pointer"
-                  style={{ width: "60px", height: "60px" }}
+                  style={{ width: "3.75rem", height: "3.75rem" }}
                 >
                   {techIcons[tech]}
                 </li>

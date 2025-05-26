@@ -38,7 +38,7 @@ function Contact() {
         <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] uppercase font-bold mb-6 sm:mb-8 text-center text-[#fff]">
           Contact Me
         </h2>
-        <p className="mb-6 sm:mb-10 text-gray-300 text-sm sm:text-base md:text-lg ">
+        <p className="mb-6 sm:mb-10 text-gray-300 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] ">
           Feel free to contact me by submitting the form below and I will get
           back to you as soon as possible
         </p>

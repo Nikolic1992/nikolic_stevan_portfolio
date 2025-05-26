@@ -45,17 +45,17 @@ function ProjectsPage() {
       </button>
 
       <div className="max-w-[1200px] w-full flex flex-col gap-10 items-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg p-10">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-white tracking-tight">
+        <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-bold text-center text-white tracking-tight">
           {project.title}
         </h1>
 
         <img
           src={project.image}
           alt={project.title}
-          className="hidden md:block  max-h-[650px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+          className="hidden md:block  max-h-[40.625rem] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
         />
 
-        <p className="text-base sm:text-lg md:text-xl text-center text-gray-300 leading-relaxed max-w-[900px]">
+        <p className="text-[1.1rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">
           {project.description}
         </p>
 

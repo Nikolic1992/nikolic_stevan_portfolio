@@ -82,7 +82,7 @@ function About() {
   };
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center p-[1rem] md:p-[2rem] lg:p-[3rem]">
-      <div className="flex flex-col justify-center items-center text-center w-full max-w-[1000px] p-[3rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
+      <div className="flex flex-col justify-center items-center text-center w-full max-w-[1400px] p-[3rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
         <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] uppercase font-bold mb-6 md:mb-9 lg:mb-12 text-center text-[#fff]">
           About Me
         </h2>

@@ -52,10 +52,10 @@ function ProjectsPage() {
         <img
           src={project.image}
           alt={project.title}
-          className="hidden md:block  max-h-[40.625rem] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+          className="hidden md:block  max-h-[600px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
         />
 
-        <p className="text-[1.1rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">
+        <p className="text-[1rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">
           {project.description}
         </p>
 

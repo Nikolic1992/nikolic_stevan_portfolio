@@ -1,8 +1,19 @@
 const projectsData = [
   {
     id: 1,
+    title: "Music Player 🎵📻",
+    image: "/assets/music-player.png",
+    mainDescription:
+      "Modern music player that connects to Deezer API, allowing users to explore tracks, play music, and enjoy a dynamic UI with toast notifications, sliders, and smooth navigation.",
+    description:
+      "ZaMusic is a dynamic and elegant web-based music player built with React and styled-components. It connects to the Deezer API (via proxy) using Axios to fetch real-time music data. Users can browse top tracks, play/pause music, and navigate between tracks with a custom slider powered by rc-slider. The interface includes responsive design elements, toast notifications with react-toastify, loading states with react-loading-skeleton, and a carousel experience using Swiper. Error handling is implemented via react-error-boundary, ensuring stability. This project demonstrates integration with third-party APIs and a well-structured, interactive audio player interface.",
+    live: "https://react-music-player-za-music.vercel.app/",
+    github: "https://github.com/Nikolic1992/react-music-player-za-music",
+  },
+  {
+    id: 2,
     title: "Travel Marvel ✈️🌍",
-    image: "../assets/travel-marvel.png",
+    image: "/assets/travel-marvel.png",
     mainDescription:
       "Smart and modern travel planner that helps users organize trips with ease. It allows users to log in, choose destinations, track expenses, and add images and documents — all designed to enhance the travel planning experience",
     description:
@@ -11,20 +22,15 @@ const projectsData = [
     github: "https://github.com/Nikolic1992/travel-marvel",
   },
   {
-    id: 2,
-    title: "E-Commerce Store",
-    image: "https://via.placeholder.com/600x400",
-    description: "Full-featured task management application.",
-    live: "https://taskmanager.com",
-    github: "https://github.com/yourusername/task-manager",
-  },
-  {
     id: 3,
-    title: "Music Player",
-    image: "https://via.placeholder.com/600x400",
-    description: "Online store with shopping cart and payment integration.",
-    live: "https://onlinestore.com",
-    github: "https://github.com/yourusername/ecommerce-store",
+    title: "eCommerce Store 🛒💳",
+    image: "/assets/ecommerce.png",
+    mainDescription:
+      "Modern and responsive online store that offers a seamless shopping experience. Users can browse products, manage their cart, and simulate the checkout process — all within a clean and intuitive interface.",
+    description:
+      "E-Commerce Store is a fully functional shopping web app built with React, JavaScript,TailwindCSS, Redux Toolkit and Clerk. It allows users to explore a product catalog, add and remove items from the cart, and dynamically update quantities with real-time price calculations. The UI is designed with Tailwind CSS for a modern and clean look, and Framer Motion is used to add smooth transitions and animations. The app includes state persistence via Redux Persist and emphasizes performance and usability. Ideal for showcasing eCommerce logic and frontend architecture, this project demonstrates a complete product flow from browsing to checkout.",
+    live: "https://e-commerce-react-js-opal-ten.vercel.app/",
+    github: "https://github.com/Nikolic1992/eCommerce-react-js",
   },
 ];
 

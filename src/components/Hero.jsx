@@ -1,4 +1,3 @@
-// ICONS
 import { MdOutlineFileDownload } from "react-icons/md";
 function Hero() {
   const smoothScroll = (id) => {
@@ -8,10 +7,12 @@ function Hero() {
     }
   };
   return (
-    <div className="relative py-[150px] md:h-screen flex flex-col items-center md:justify-center px-4">
-      <div className="flex flex-col md:justify-center md:items-center text-center w-full max-w-[1000px] p-6 sm:p-[2rem] gap-[1.875rem] md:gap-[3.75rem] bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
-        <h1 className="hero-heading">Hi, I'm Stevan</h1>
-        <h3 className="hero-secondary">
+    <div className="relative flex flex-col items-center px-2 py-24 sm:px-4 md:px-8 lg:px-12 xl:px-0 min-h-[90vh] md:min-h-screen pt-[4.5rem]">
+      <div className="flex flex-col justify-center items-center text-center w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl p-4 sm:p-8 md:p-10 gap-8 md:gap-14 bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
+        <h1 className="hero-heading text-[2.2rem] sm:text-[2.7rem] md:text-[3.2rem] lg:text-[3.7rem] xl:text-[4rem]">
+          Hi, I'm Stevan
+        </h1>
+        <h3 className="hero-secondary text-[1.1rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.6rem]">
           Welcome to my little corner of the internet. Whether you're here by
           choice or cosmic accident — enjoy the scroll. If my work speaks to you
           (or whispers mildly), feel free to reach out. I'm just one message
@@ -19,10 +20,10 @@ function Hero() {
           <br />
           <span className="font-italic">Let's build something awesome!</span>
         </h3>
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
           <button
             onClick={() => smoothScroll("projects")}
-            className="hero-btn wiggle-on-hover"
+            className="hero-btn wiggle-on-hover w-full sm:w-auto"
           >
             Projects
           </button>
@@ -31,15 +32,13 @@ function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             download
-            className="hero-resume-btn wiggle-on-hover gap-2 flex items-center"
+            className="hero-resume-btn wiggle-on-hover gap-2 flex items-center w-full sm:w-auto justify-center"
           >
             <span>Resume</span>
-            <MdOutlineFileDownload size={30} />
+            <MdOutlineFileDownload size={28} />
           </a>
         </div>
       </div>
-
-      {/* Bottom page loader - CENTERED */}
       <div className="absolute bottom-8 flex justify-center w-full">
         <span className="loader"></span>
       </div>

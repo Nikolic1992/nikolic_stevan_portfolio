@@ -30,7 +30,7 @@ function NavBar() {
       <div className="relative flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8">
         <div
           onClick={handleLogoClick}
-          className="w-[60px] h-[60px] rounded-full flex items-center justify-center cursor-pointer "
+          className="w-[60px] h-[60px] rounded-full flex items-center justify-center cursor-pointer"
         >
           <img
             src="./assets/logo.png"

@@ -1,12 +1,7 @@
-/*
-  Refactored for responsiveness: 
-  - All text sizes use rem units for better scaling
-  - Added/remapped responsive classes to use rems
-*/
 @import "tailwindcss";
 
 html {
-  font-size: 16px; /* base for rems */
+  font-size: 16px;
 }
 
 body {
@@ -21,40 +16,40 @@ body {
 .navbar-btn {
   @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md 
          shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  transition-all duration-300
-         py-[0.5rem] px-[1rem] text-[0.9rem] w-[7.5rem] flex justify-center items-center border border-gray-400;
+         py-2 px-4 text-sm w-32 flex justify-center items-center border border-gray-400;
 }
 
 @media (max-width: 768px) {
   .navbar-link {
-    @apply w-[9rem] h-[2rem] text-[1rem] justify-center border-0;
+    @apply w-36 h-8 text-base justify-center border-0;
   }
 }
 
 .hero-heading {
-  @apply text-[2.5rem] md:text-[3.5rem] lg:text-[5rem] font-extrabold text-[white] uppercase;
+  @apply text-3xl md:text-5xl lg:text-7xl font-extrabold text-white uppercase;
 }
 
 .hero-secondary {
-  @apply max-w-2xl text-[1.1rem] md:text-[1.5rem] lg:text-[2rem] text-[#f3f3f3];
+  @apply max-w-2xl text-base md:text-lg lg:text-2xl text-[#f3f3f3];
 }
 
 .hero-btn {
   @apply bg-[#333] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  hover:scale-110 
-         py-[0.75rem] px-[1.5rem] text-[1.1rem] md:text-[1.5rem] transition duration-300 ease-in-out md:w-[12.5rem];
+         py-3 px-6 text-base md:text-xl transition duration-300 ease-in-out md:w-48;
 }
 
 .hero-resume-btn {
   @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider  font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)]   hover:scale-110 
-         py-[0.75rem] px-[1.5rem] text-[1.1rem] md:text-[1.5rem] transition duration-300 ease-in-out md:w-[12.5rem];
+         py-3 px-6 text-base md:text-xl transition duration-300 ease-in-out md:w-48;
 }
 
 .contact-btn {
   @apply bg-[#7843E9] text-white uppercase flex items-center justify-center cursor-pointer tracking-wider font-semibold rounded-md 
          shadow-[0_5px_15px_rgba(0,0,0,0.15)]  hover:scale-110 
-         text-[1.25rem] md:text-[1.5rem] transition duration-300 ease-in-out 
-         w-full md:w-[12.5rem] h-[3.5rem];
+         text-xl md:text-2xl transition duration-300 ease-in-out 
+         w-full md:w-48 h-14;
 }
 
 /* Mouse loader */
@@ -127,10 +122,10 @@ body {
 }
 
 /*
-  Add unique spacing for <hr /> section dividers
+Add unique spacing for <hr /> section dividers
 */
 .section-divider {
-  margin-top: 3.5rem; /* 56px */
+  margin-top: 3.5rem;
   margin-bottom: 3.5rem;
   border: none;
   border-top: 2px solid #fff;

@@ -15,18 +15,17 @@ function NavBar() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // Close menu if open
+      setMenuOpen(false); // Close menu
     }
   };
 
-  // Scroll to the #home section ( HERO )
   const handleLogoClick = () => {
     navigate("/", { state: { scrollTo: "home" } });
     smoothScroll("home");
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] z-50 ">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-md">
       <div className="relative flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8">
         <div
           onClick={handleLogoClick}
@@ -35,12 +34,12 @@ function NavBar() {
           <img
             src="./assets/logo.png"
             alt="SN technology logo"
-            className="w-[50px] h-[50px] lg:w-[75px] lg:h-[75px] rounded-full absolute z-50 bg-[radial-gradient (circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] lg:ml-10"
+            className="w-[50px] h-[50px] lg:w-[75px] lg:h-[75px] rounded-full absolute z-50 bg-white/20 backdrop-blur-md border border-white/30 shadow-md lg:ml-10"
           />
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-4 sm:gap-6 md:gap-[2rem]  font-semibold">
+        <ul className="hidden md:flex gap-4 sm:gap-6 md:gap-[2rem] font-semibold">
           {["home", "about", "projects", "contact"].map((section) => (
             <li key={section}>
               <a
@@ -49,7 +48,7 @@ function NavBar() {
                   e.preventDefault();
                   smoothScroll(section);
                 }}
-                className="navbar-btn "
+                className="navbar-btn"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
@@ -77,9 +76,9 @@ function NavBar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col items-end gap-[0.3125rem] py-2 bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] font-semibold text-[1.1rem]">
+        <ul className="md:hidden flex flex-col items-end gap-[0.3125rem] py-4 px-4 bg-white/10 backdrop-blur-md border-t border-white/20 font-semibold text-[1.1rem] shadow-md">
           {["home", "about", "projects", "contact"].map((section) => (
-            <li key={section} className="px-4">
+            <li key={section}>
               <a
                 href={`#${section}`}
                 onClick={(e) => {

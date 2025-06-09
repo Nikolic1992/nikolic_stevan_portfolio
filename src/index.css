@@ -16,7 +16,7 @@ body {
 .navbar-btn {
   @apply bg-[#333] text-white uppercase tracking-widest font-bold rounded-md 
          shadow-[0_5px_15px_0_rgba(0,0,0,0.15)] hover:bg-[#7843E9]  transition-all duration-300
-         py-2 px-4 text-sm w-32 flex justify-center items-center border border-gray-400;
+         py-2 px-4 text-sm w-32 flex justify-center items-center;
 }
 
 @media (max-width: 768px) {
@@ -70,9 +70,9 @@ body {
   transform: translate(-50%, 50%);
   width: 0.3125rem;
   height: 0.3125rem;
-  background: #7843e9;
+  background: #04df3b;
   border-radius: 50%;
-  animation: fadeDown 1s ease-out infinite;
+  animation: fadeDown 1.2s ease-out infinite;
 }
 
 @keyframes fadeDown {

@@ -27,25 +27,28 @@ function Contact() {
         (error) => {
           console.error("Failed to send email:", error);
           setStatusMessage("Failed to send message. Please try again.");
-          console.error(error.text);
           setIsSubmitting(false);
         }
       );
   };
+
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
-      <div className="bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] px-6 sm:px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg w-full max-w-[1000px] text-center">
-        <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] uppercase font-bold mb-6 sm:mb-8 text-center text-[#fff]">
+    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 bg-[url('/assets/contact_background.jpg')] bg-cover bg-center">
+      {/* Blur overlay behind content */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-md -z-10" />
+
+      <div className="relative bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-lg w-full max-w-[1000px] px-6 sm:px-8 py-8 sm:py-10 text-center text-gray-300 z-30">
+        <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] uppercase font-bold mb-6 sm:mb-8 text-center text-white">
           Contact Me
         </h2>
-        <p className="mb-6 sm:mb-10 text-gray-300 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] ">
+        <p className="mb-6 sm:mb-10 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem]">
           Feel free to contact me by submitting the form below and I will get
           back to you as soon as possible
         </p>
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col space-y-4 sm:space-y-6 text-left text-gray-300"
+          className="flex flex-col space-y-4 sm:space-y-6 text-left"
         >
           <div className="flex flex-col">
             <label
@@ -60,7 +63,7 @@ function Contact() {
               required
               type="text"
               placeholder="Enter Your Name"
-              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-gray-300 bg-transparent"
             />
           </div>
 
@@ -77,7 +80,7 @@ function Contact() {
               required
               type="email"
               placeholder="Enter Your Email"
-              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 focus:outline-none focus:ring-2 focus:ring-gray-300 bg-transparent"
             />
           </div>
 
@@ -94,7 +97,7 @@ function Contact() {
               rows="5"
               required
               placeholder="Enter Your Message..."
-              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 resize-none focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="border border-gray-700 text-gray-300 rounded px-3 py-2 sm:px-4 sm:py-3 resize-none focus:outline-none focus:ring-2 focus:ring-gray-300 bg-transparent"
             ></textarea>
           </div>
 

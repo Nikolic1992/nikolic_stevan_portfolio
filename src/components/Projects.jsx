@@ -4,8 +4,17 @@ import projectsData from "../data/projectsData";
 
 function Projects() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-30">
-      <div className="flex flex-col justify-center items-center text-center w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-12 py-10 bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg">
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-30 bg-[url('/assets/projects_background.jpg')] bg-cover bg-center">
+      <div
+        className="
+          flex flex-col justify-center items-center text-center w-full max-w-[1400px]
+          px-4 sm:px-6 md:px-8 lg:px-12 py-10
+          bg-white/10 backdrop-blur-md
+          border border-white/20
+          shadow-[0_0_40px_rgba(255,255,255,0.1)]
+          rounded-lg
+        "
+      >
         <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[4rem] uppercase font-bold text-white mb-8">
           Projects
         </h2>
@@ -19,7 +28,13 @@ function Projects() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col lg:flex-row items-center justify-center p-6 gap-8 w-full bg-[radial-gradient(circle,_#ffffff,_#e0e0e0,_#c0c0c0)] shadow-[0_0_10px_rgba(0,0,0,0.5)] rounded-lg"
+              className="
+                flex flex-col lg:flex-row items-center justify-center p-6 gap-8 w-full
+                bg-white/10 backdrop-blur-md
+                border border-white/20
+                shadow-[0_0_10px_rgba(255,255,255,0.1)]
+                rounded-lg
+              "
             >
               <div className="w-full max-w-[800px] aspect-video rounded-lg overflow-hidden">
                 <img
@@ -33,7 +48,7 @@ function Projects() {
                 <h3 className="text-[1.25rem] sm:text-[1.5rem] font-semibold">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] max-w-[400px]">
+                <p className="text-white text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] max-w-[400px]">
                   {project.mainDescription}
                 </p>
                 <Link

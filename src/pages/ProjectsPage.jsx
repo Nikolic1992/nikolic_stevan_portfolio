@@ -23,7 +23,7 @@ function ProjectsPage() {
 
   if (!project) {
     return (
-      <div className="relative min-h-screen flex items-center justify-center text-white text-xl">
+      <div className="relative min-h-screen flex items-center justify-center text-white text-xl ">
         <button
           onClick={handleBack}
           className="absolute navbar-btn cursor-pointer top-5 left-5"
@@ -36,7 +36,12 @@ function ProjectsPage() {
   }
 
   return (
-    <div className=" relative min-h-screen text-white px-6 py-12 flex flex-col items-center justify-center">
+    <div
+      className="
+        relative min-h-screen text-white px-6 py-12 flex flex-col items-center justify-center
+        bg-[url('/assets/projects_background.jpg')] bg-cover bg-center
+      "
+    >
       <button
         onClick={handleBack}
         className="absolute navbar-btn cursor-pointer top-5 left-5"
@@ -44,7 +49,14 @@ function ProjectsPage() {
         GO BACK
       </button>
 
-      <div className="max-w-[1200px] w-full flex flex-col gap-10 items-center bg-[radial-gradient(circle,_#2a2a2a,_#1f1f1f,_#000000)] shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg p-10">
+      <div
+        className="
+          max-w-[1200px] w-full flex flex-col gap-10 items-center
+          bg-white/10 backdrop-blur-md border border-white/20
+          shadow-[0_0_40px_rgba(255,255,255,0.1)]
+          rounded-lg p-10
+        "
+      >
         <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-bold text-center text-white tracking-tight">
           {project.title}
         </h1>
@@ -52,7 +64,7 @@ function ProjectsPage() {
         <img
           src={project.image}
           alt={project.title}
-          className="hidden md:block  max-h-[600px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+          className="hidden md:block max-h-[600px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
         />
 
         <p className="text-[1rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">

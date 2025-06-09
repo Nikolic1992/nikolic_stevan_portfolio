@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
 
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
@@ -8,10 +9,25 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+function Section({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 function HomePage() {
   const location = useLocation();
 
-  // Scroll to the desired section
   useEffect(() => {
     if (location.state?.scrollTo) {
       const el = document.getElementById(location.state.scrollTo);
@@ -26,19 +42,24 @@ function HomePage() {
       <NavBar />
       <main>
         <section id="home">
-          <Hero />
-          <hr className="section-divider" aria-hidden="true" />
+          <Section>
+            <Hero />
+          </Section>
         </section>
         <section id="about">
-          <About />
-          <hr className="section-divider" aria-hidden="true" />
+          <Section>
+            <About />
+          </Section>
         </section>
         <section id="projects">
-          <Projects />
-          <hr className="section-divider" aria-hidden="true" />
+          <Section>
+            <Projects />
+          </Section>
         </section>
         <section id="contact">
-          <Contact />
+          <Section>
+            <Contact />
+          </Section>
         </section>
       </main>
       <Footer />

@@ -39,7 +39,7 @@ function ProjectsPage() {
     <div
       className="
         relative min-h-screen text-white px-6 py-12 flex flex-col items-center justify-center
-        bg-[url('/assets/projects_background.jpg')] bg-cover bg-center
+        bg-[url('/assets/background.jpg')] bg-cover bg-center
       "
     >
       <button

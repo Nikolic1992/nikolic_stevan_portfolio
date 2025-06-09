@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className=" text-white py-6 md:py-5 text-center">
+    <footer className=" text-white py-6 md:py-5 text-center bg-[#070802]">
       <div className="flex flex-col items-center gap-4">
         <h2 className="text-[1.1rem] md:text-[1.25rem] lg:text-[1.5rem] font-semibold tracking-wide uppercase">
           Let’s connect

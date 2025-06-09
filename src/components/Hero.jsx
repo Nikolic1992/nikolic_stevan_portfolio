@@ -9,7 +9,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center px-2 py-24 sm:px-4 md:px-8 lg:px-12 xl:px-0 min-h-[90vh] md:min-h-screen pt-[4.5rem] bg-[url('/assets/contact_background.jpg')] bg-cover bg-center">
+    <div className="relative flex flex-col items-center justify-center px-2 py-24 sm:px-4 md:px-8 lg:px-12 xl:px-0 min-h-[90vh] md:min-h-screen pt-[4.5rem] bg-[url('/assets/background.jpg')] bg-cover bg-center">
       {/* Content with glassmorphism */}
       <div
         className="relative z-10 flex flex-col justify-center items-center text-center w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl p-4 sm:p-8 md:p-10 gap-8 md:gap-14 
@@ -47,7 +47,7 @@ function Hero() {
       </div>
 
       {/* Loader */}
-      <div className="absolute bottom-8 flex justify-center w-full z-10">
+      <div className="absolute bottom-20 flex justify-center w-full z-10">
         <span className="loader"></span>
       </div>
     </div>

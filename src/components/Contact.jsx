@@ -33,7 +33,7 @@ function Contact() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 bg-[url('/assets/contact_background.jpg')] bg-cover bg-center">
+    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 bg-[url('/assets/background.jpg')] bg-cover bg-center">
       {/* Blur overlay behind content */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-md -z-10" />
 

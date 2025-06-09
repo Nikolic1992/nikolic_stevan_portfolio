@@ -62,13 +62,13 @@ function NavBar() {
             <IoMdClose
               size={30}
               onClick={toggleMenu}
-              className="cursor-pointer"
+              className="cursor-pointer text-white"
             />
           ) : (
             <RxHamburgerMenu
               size={30}
               onClick={toggleMenu}
-              className="cursor-pointer"
+              className="cursor-pointer text-white"
             />
           )}
         </div>

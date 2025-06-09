@@ -81,7 +81,7 @@ function About() {
     }
   };
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center p-[1rem] md:p-[2rem] lg:p-[3rem] bg-[url('/assets/about_background.jpg')] bg-cover bg-center">
+    <div className="relative min-h-screen flex flex-col justify-center items-center p-[1rem] md:p-[2rem] lg:p-[3rem] bg-[url('/assets/background.jpg')] bg-cover bg-center">
       <div
         className="flex flex-col justify-center items-center text-center w-full max-w-[1200px] md:max-w-[1200px] p-[3rem] 
         bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_40px_rgba(0,0,0,0.6)] rounded-lg"
@@ -90,16 +90,16 @@ function About() {
           About Me
         </h2>
         <h4 className="text-[#fff] text-[1.1rem] md:text-[1.25rem] lg:text-[1.5rem]">
-          My name is <b>Stevan Nikolic</b>, a dedicated{" "}
-          <b>Full Stack Web Developer</b> based in Sydney, Australia. My
-          approach to programming is driven by curiosity, but sustained by a
-          strong commitment to quality and precision. What began as simple
-          experimentation quickly grew into a disciplined practice where every
-          line of code matters. I take pride in crafting clean, efficient, and
-          well-structured solutions, paying close attention to detail to ensure
-          that each project is not only functional but also reliable and
-          visually polished. For me, there is great satisfaction in transforming
-          a blank screen into a seamless and impactful user experience.
+          My name is <b>Stevan</b>, a dedicated <b>Full Stack Web Developer</b>{" "}
+          based in Sydney, Australia. My approach to programming is driven by
+          curiosity, but sustained by a strong commitment to quality and
+          precision. What began as simple experimentation quickly grew into a
+          disciplined practice where every line of code matters. I take pride in
+          crafting clean, efficient, and well-structured solutions, paying close
+          attention to detail to ensure that each project is not only functional
+          but also reliable and visually polished. For me, there is great
+          satisfaction in transforming a blank screen into a seamless and
+          impactful user experience.
         </h4>
         <div className="mt-12 flex flex-col gap-16 lg:flex-row text-left w-full">
           <div className="flex-1 space-y-6">

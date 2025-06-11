@@ -57,7 +57,7 @@ function ProjectsPage() {
           rounded-lg p-10
         "
       >
-        <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-bold text-center text-white tracking-tight">
+        <h1 className="text-[1.8rem] sm:text-[2.2rem] md:text-[3rem] font-bold text-center text-white tracking-tight">
           {project.title}
         </h1>
 
@@ -67,7 +67,7 @@ function ProjectsPage() {
           className="hidden md:block max-h-[600px] object-contain rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
         />
 
-        <p className="text-[1rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">
+        <p className="text-[0.85rem] sm:text-[1.25rem] md:text-[1.5rem] text-center text-gray-300 leading-relaxed max-w-[900px]">
           {project.description}
         </p>
 

@@ -23,6 +23,17 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "Movie App 🎬🍿",
+    image: "/assets/movie-app.png",
+    mainDescription:
+      "Modern and responsive movie search app powered by TMDB API and Appwrite. Search, explore trending movies, and enjoy smooth UX with loading spinners and error handling.",
+    description:
+      "Movie App is a dynamic and fully responsive movie search web application built with React, Tailwind CSS, and Appwrite. It leverages the TMDB API to fetch real-time movie data and allows users to search for movies, explore trending titles, and view results with debounced search functionality to optimize API calls. The UI features smooth loading states using custom spinners, error handling for failed API requests, and a clean modern interface powered by Tailwind CSS. Appwrite is integrated to manage trending movie data, while React-use ensures efficient debouncing. This project showcases integration with external APIs, modern UI/UX patterns, and frontend architecture best practices.",
+    live: "https://movie-app-react-plum.vercel.app/",
+    github: "https://github.com/Nikolic1992/movie-app-react",
+  },
+  {
+    id: 4,
     title: "eCommerce Store 🛒💳",
     image: "/assets/ecommerce.png",
     mainDescription:

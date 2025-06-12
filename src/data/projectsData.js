@@ -34,12 +34,12 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "eCommerce Store 🛒💳",
+    title: "Shopfinity 🛒💳",
     image: "/assets/ecommerce.png",
     mainDescription:
       "Modern and responsive online store that offers a seamless shopping experience. Users can browse products, manage their cart, and simulate the checkout process — all within a clean and intuitive interface.",
     description:
-      "E-Commerce Store is a fully functional shopping web app built with React, JavaScript,TailwindCSS, Redux Toolkit and Clerk. It allows users to explore a product catalog, add and remove items from the cart, and dynamically update quantities with real-time price calculations. The UI is designed with Tailwind CSS for a modern and clean look, and Framer Motion is used to add smooth transitions and animations. The app includes state persistence via Redux Persist and emphasizes performance and usability. Ideal for showcasing eCommerce logic and frontend architecture, this project demonstrates a complete product flow from browsing to checkout.",
+      "Shopfinity is a fully functional shopping web app built with React, JavaScript,TailwindCSS, Redux Toolkit and Clerk. It allows users to explore a product catalog, add and remove items from the cart, and dynamically update quantities with real-time price calculations. The UI is designed with Tailwind CSS for a modern and clean look, and Framer Motion is used to add smooth transitions and animations. The app includes state persistence via Redux Persist and emphasizes performance and usability. Ideal for showcasing eCommerce logic and frontend architecture, this project demonstrates a complete product flow from browsing to checkout.",
     live: "https://e-commerce-react-js-opal-ten.vercel.app/",
     github: "https://github.com/Nikolic1992/eCommerce-react-js",
   },
